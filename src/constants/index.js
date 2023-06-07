@@ -104,7 +104,7 @@ import {
   
   const experiences = [
     {
-      title: "Frontend Developer Analyst",
+      title: "Frontend Developer",
       company_name: "Officenet S.A.",
       icon: alot,
       iconBg: "#E6DEDD",
@@ -134,7 +134,7 @@ import {
       company_name: "Mater Dei Sanatorium",
       icon: mater_dei,
       iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
+      date: "Jan 2015 - Apr 2018",
       points: [
         "Ensure a correct liquidation of assets and profits - end to end process.",
         "Administrative management of prepaid medicine and medical insurance, union payments, ART and legal",
