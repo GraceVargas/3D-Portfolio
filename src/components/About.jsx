@@ -2,7 +2,6 @@ import React from 'react';
 import { Tilt } from "react-tilt";
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 
@@ -44,16 +43,17 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I am a curious and methodical person, and I am excited to continue growing in my career as Web developer. 
-        I am sure of that my training in Relations of the Work and my passion for learning will allow me to add 
-        value to any team.
+        I'm a curious and methodical web developer with a background in Labor Relations. I'm passionate about 
+        programming and constantly seek opportunities to learn new technologies and languages. In this portfolio, 
+        you'll find a collection of my projects that demonstrate my attention to detail, dedication to quality, and 
+        ability to create engaging websites. Let's connect and create something remarkable together!
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      {/* <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 };

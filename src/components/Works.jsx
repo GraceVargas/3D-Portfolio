@@ -55,8 +55,8 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>My work</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Projects.</h2>
+        <p className={`${styles.sectionSubText}`}>My work</p>
+        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -64,7 +64,9 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-         Resumen de proyectos. 
+           I'm thrilled to share with you some of my recent projects, that reflect my skills and experience as a 
+           versatile web developer.  <br />
+           Each project contains the link to the code repository and another link to access the site. 
         </motion.p>
       </div>
 
