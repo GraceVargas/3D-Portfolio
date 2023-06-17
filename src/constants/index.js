@@ -15,10 +15,12 @@ import {
     git,
     alot,
     mater_dei,
-    carrent,
-    jobit,
-    tripguide,
+    job_finder,
+    ahorradas,
+    generador_claves,
+    fixo,
     threejs,
+    film_social,
   } from "../assets";
   
   export const navLinks = [
@@ -171,37 +173,16 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Conectadas",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Social network where you can search and post movies to recommend, see the posts of the followed friends and leave comments on them.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: carrent,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Job IT",
-      description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "restapi",
+          name: "typescript",
           color: "green-text-gradient",
         },
         {
@@ -209,20 +190,43 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: film_social,
+      source_code_link: "https://github.com/GraceVargas/Social-Network",
+      deploy_link: "https://gracevargas.github.io/Social-Network/",
     },
     {
-      name: "Trip Guide",
+      name: "Job IT",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "Web application that enables users to create and modify job openings, and also to search available jobs based on their current location, position and seniorities.",
       tags: [
         {
-          name: "nextjs",
+          name: "javascript",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "typescript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "scss",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: job_finder,
+      source_code_link: "https://github.com/GraceVargas/Job-finder",
+      deploy_link: "https://gracevargas.github.io/Job-finder/",
+    },
+    {
+      name: "Ahorradas",
+      description:
+        "Application to manage income and budget, being able to load transactions divided by categories and generating reports automatically.",
+      tags: [
+        {
+          name: "typescript",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "bootstrap",
           color: "green-text-gradient",
         },
         {
@@ -230,8 +234,49 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: ahorradas,
+      source_code_link: "https://github.com/GraceVargas/Ahorradas",
+      deploy_link: "https://gracevargas.github.io/Ahorradas/",
+    },
+    {
+      name: "Paswword generator",
+      description:
+        "Creates random and secure passwords based on parameters set by you. Parameters include password length, rules and types of character.",
+      tags: [
+        {
+          name: "typescript",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "bootstrap",
+          color: "green-text-gradient",
+        },
+        {
+          name: "css",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: generador_claves,
+      source_code_link: "https://github.com/GraceVargas/Generador-de-claves",
+      deploy_link: "https://gracevargas.github.io/Generador-de-claves/",
+    },
+    {
+      name: "Fixo Electrónica Service",
+      description:
+        "Fixo Electrónica is a web page that offers electronic and computer repair service. Including details of services, contact form and google reviews.",
+      tags: [
+        {
+          name: "html",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "css",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: fixo,
+      source_code_link: "https://github.com/GraceVargas/fixo.pc",
+      deploy_link: "https://gracevargas.github.io/fixo.pc/",
     },
   ];
   
