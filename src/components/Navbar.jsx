@@ -1,27 +1,17 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next' 
-
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
-import LocaleContext from "../context/LocaleContext";
-import i18n from "../i18n";
-import SwitchButton from "./SwitchButton";
+import SwitchLanguageButton from "./SwitchLanguageButton";
+
 
 const Navbar = () => {
   const { t } = useTranslation();
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
-  const { locale } = useContext(LocaleContext);
-
-  function changeLocale (l) {
-    if (locale !== l) {
-      i18n.changeLanguage(l);
-    }
-  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,11 +27,6 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // const handleSwitch = () => {
-  //   changeLocale('es')
-  //   console.log(locale)
-  // }
 
   return (
     <nav
@@ -78,9 +63,9 @@ const Navbar = () => {
               <a href={`#${id}`}>{t(title)}</a>
             </li>
           ))}
-          {/* <li><SwitchButton handleSwitch={() => changeLocale('en')} /></li> */}
-          <li><button onClick={() => changeLocale('en')}>English</button></li>
-          <li><button onClick={() => changeLocale('es')}>Spanish</button></li>
+          <li><SwitchLanguageButton/></li>
+          {/* <li><button onClick={() => changeLocale('en')}>English</button></li>
+          <li><button onClick={() => changeLocale('es')}>Spanish</button></li> */}
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
