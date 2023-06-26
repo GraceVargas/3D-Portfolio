@@ -5,8 +5,12 @@ import { github, deploy } from '../assets';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
+import { useTranslation } from 'react-i18next';
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link, deploy_link }) => {
+
+  const { t } = useTranslation();
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -20,7 +24,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
         <div className='relative w-full h-[230px]'>
           <img 
             src={image} 
-            alt={name}
+            alt={t(name)}
             className='w-full h-full object-cover rounded-2xl' 
           />
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
@@ -41,8 +45,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
         {/* agregar un circulo para ver la pagina deployada */}
 
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <h3 className='text-white font-bold text-[24px]'>{t(name)}</h3>
+          <p className='mt-2 text-secondary text-[14px]'>{t(description)}</p>
         </div>
         
         <div className='mt-4 flex flex-wrap gap-2'>
@@ -58,11 +62,13 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
 }
 
 const Works = () => {
+
+  const { t } = useTranslation();
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <p className={`${styles.sectionSubText}`}>{t('Work')}</p>
+        <h2 className={`${styles.sectionHeadText}`}>{t('Projects')}.</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -70,9 +76,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-           I'm thrilled to share with you some of my recent projects, that reflect my skills and experience as a 
-           versatile web developer.  <br />
-           Each project contains the link to the code repository and another link to access the site. 
+          {t('Projects_text')} 
         </motion.p>
       </div>
 

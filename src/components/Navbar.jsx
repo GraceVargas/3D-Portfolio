@@ -1,14 +1,27 @@
-import React, { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next' 
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import LocaleContext from "../context/LocaleContext";
+import i18n from "../i18n";
+import SwitchButton from "./SwitchButton";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const { locale } = useContext(LocaleContext);
+
+  function changeLocale (l) {
+    if (locale !== l) {
+      i18n.changeLanguage(l);
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +37,11 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // const handleSwitch = () => {
+  //   changeLocale('es')
+  //   console.log(locale)
+  // }
 
   return (
     <nav
@@ -49,17 +67,20 @@ const Navbar = () => {
         </Link>
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
-          {navLinks.map((nav) => (
+          {navLinks.map(({id, title}) => (
             <li
-              key={nav.id}
+              key={id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
+                active === title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => setActive(title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a href={`#${id}`}>{t(title)}</a>
             </li>
           ))}
+          {/* <li><SwitchButton handleSwitch={() => changeLocale('en')} /></li> */}
+          <li><button onClick={() => changeLocale('en')}>English</button></li>
+          <li><button onClick={() => changeLocale('es')}>Spanish</button></li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -76,18 +97,18 @@ const Navbar = () => {
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
-              {navLinks.map((nav) => (
+              {navLinks.map(({id, title}) => (
                 <li
-                  key={nav.id}
+                  key={id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                    active === title ? "text-white" : "text-secondary"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);
-                    setActive(nav.title);
+                    setActive(title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a href={`#${id}`}>{t(title)}</a>
                 </li>
               ))}
             </ul>

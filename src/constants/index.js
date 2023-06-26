@@ -26,15 +26,15 @@ import {
   export const navLinks = [
     {
       id: "about",
-      title: "About",
+      title: "Nav_About",
     },
     {
       id: "work",
-      title: "Work",
+      title: "Nav_Work",
     },
     {
       id: "contact",
-      title: "Contact",
+      title: "Nav_Contact",
     },
   ];
   
@@ -106,40 +106,40 @@ import {
   
   const experiences = [
     {
-      title: "Frontend Developer",
+      title: "Exp_1_title",
       company_name: "Officenet S.A.",
       icon: alot,
       iconBg: "#E6DEDD",
-      date: "Oct 2022 - Present",
+      date: "Exp_1_date",
       points: [
-        "Maintain and optimize the front-end of the website alot.com.ar.",
-        "Participate in design and architecture definitions.",
-        "Classic ASP, SQL Server, Javascript, HTML and CSS.",
-        "Use of ClickUp as an agile methodology.",
+        "Exp_1_point_1",
+        "Exp_1_point_2",
+        "Exp_1_point_3",
+        "Exp_1_point_4",
       ],
     },
     {
-      title: "Sr. Analyst of Personnel Administration and Payroll",
+      title: "Exp_2_title",
       company_name: "Officenet S.A.",
       icon: alot,
       iconBg: "#E6DEDD",
-      date: "Apr 2018 - Sept 2022",
+      date: "Exp_2_date",
       points: [
-          "Ensure a correct liquidation of assets and profits - end to end process (300 employees).",
-          "Prepare accounting entries and presentation of social security charges and SICORE.",
-          "Prepare accounts and financial reports as required.",
-          "Administrative management of prepaid medicine and medical insurance, union payments, ART and legal",
+          "Exp_2_point_1",
+          "Exp_2_point_2",
+          "Exp_2_point_3",
+          "Exp_2_point_4",
       ],
     },
     {
-      title: "Human Resources General Analyst",
-      company_name: "Mater Dei Sanatorium",
+      title: "Exp_3_title",
+      company_name: "Mater Dei",
       icon: mater_dei,
       iconBg: "#383E56",
-      date: "Jan 2015 - Apr 2018",
+      date: "Exp_3_date",
       points: [
-        "Ensure a correct liquidation of assets and profits - end to end process.",
-        "Administrative management of prepaid medicine and medical insurance, union payments, ART and legal",
+        "Exp_3_point_1",
+        "Exp_3_point_2",
       ],
     },
   ];
@@ -175,7 +175,7 @@ import {
     {
       name: "Conectadas",
       description:
-        "Social network where you can search and post movies to recommend, see the posts of the followed friends and leave comments on them.",
+        "Project_1_desc",
       tags: [
         {
           name: "react",
@@ -197,7 +197,7 @@ import {
     {
       name: "Job IT",
       description:
-        "Web application that enables users to create and modify job openings, and also to search available jobs based on their current location, position and seniorities.",
+        "Project_2_desc",
       tags: [
         {
           name: "javascript",
@@ -219,7 +219,7 @@ import {
     {
       name: "Ahorradas",
       description:
-        "Application to manage income and budget, being able to load transactions divided by categories and generating reports automatically.",
+        "Project_3_desc",
       tags: [
         {
           name: "typescript",
@@ -239,9 +239,9 @@ import {
       deploy_link: "https://gracevargas.github.io/Ahorradas/",
     },
     {
-      name: "Paswword generator",
+      name: "Password generator",
       description:
-        "Creates random and secure passwords based on parameters set by you. Parameters include password length, rules and types of character.",
+        "Project_4_desc",
       tags: [
         {
           name: "typescript",
@@ -263,7 +263,7 @@ import {
     {
       name: "Fixo Electrónica Service",
       description:
-        "Fixo Electrónica is a web page that offers electronic and computer repair service. Including details of services, contact form and google reviews.",
+        "Project_5_desc",
       tags: [
         {
           name: "html",
