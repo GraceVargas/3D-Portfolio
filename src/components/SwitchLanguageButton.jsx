@@ -31,12 +31,14 @@ const SwitchLanguageButton = () => {
           />
           <div
             className={`block w-10 h-6 bg-gray-300 rounded-full shadow-inner ${
-              isChecked ? "bg-blue-500" : "bg-gray-400"
+              isChecked ? "bg-gray-400" : "bg-gray-600"
             }`}
           />
           <div
-            className={`dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition ${
-              isChecked ? "transform translate-x-full" : ""
+            className={`dot absolute left-1 top-1  w-4 h-4 rounded-full transition ${
+              isChecked
+                ? "bg-gray-600 transform translate-x-full"
+                : "bg-gray-400"
             }`}
           />
         </div>
