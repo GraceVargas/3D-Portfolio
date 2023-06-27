@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
+import { useTranslation } from 'react-i18next' 
 
 
 const ServiceCard = ({ index, title, icon }) => {
@@ -32,21 +33,21 @@ const ServiceCard = ({ index, title, icon }) => {
 }
 
 const About = () => {
+  
+  const { t } = useTranslation();
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <p className={styles.sectionSubText}>{t('Introduction')}</p>
+        <h2 className={styles.sectionHeadText}>{t('Overview')}.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a curious and methodical web developer with a background in Labor Relations. I'm passionate about 
-        programming and constantly seek opportunities to learn new technologies and languages. In this portfolio, 
-        you'll find a collection of my projects that demonstrate my attention to detail, dedication to quality, and 
-        ability to create engaging websites. Let's connect and create something remarkable together!
+       {t('Intro_description')}
       </motion.p>
 
       {/* <div className='mt-20 flex flex-wrap gap-10'>
