@@ -7,7 +7,11 @@ i18next
   .use(HttpBackend)
   .init({
     backend: {
-      loadPath: 'https://gracevargas.github.io/3D-Portfolio/locales/{{lng}}/{{ns}}.json',
+      loadPath: () => {
+        // check the domain
+        const host = window.location.host;
+        return (host === 'production.ltd' ? '/static/app':'') + '/locales/{{lng}}/{{ns}}.json';
+      },
     },
     lng: 'en',
     load: 'languageOnly',
