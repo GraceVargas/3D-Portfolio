@@ -15,9 +15,9 @@ import { useState } from "react";
 import LocaleContext from "./context/LocaleContext";
 
 const App = () => {
-  const [locale, setLocale] = useState(i18n.language);
+  const [locale, setLocale] = useState("en");
 
-  i18n.on("languageChanged", () => setLocale(i18n.language));
+  i18n.on("languageChanged", (lng) => setLocale(i18n.language));
 
   return (
     <LocaleContext.Provider value={{ locale, setLocale }}>

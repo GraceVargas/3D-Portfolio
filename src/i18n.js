@@ -1,13 +1,16 @@
-import i18n from "i18next";
+import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
-import Backend from 'i18next-http-backend';
-import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
+import HttpBackend from 'i18next-http-backend';
 
-i18n
-  .use(Backend)
-  .use(I18nextBrowserLanguageDetector)
+i18next
   .use(initReactI18next) // passes i18n down to react-i18next
+  .use(HttpBackend)
   .init({
+    backend: {
+      loadPath: 'https://gracevargas.github.io/3D-Portfolio/locales/{{lng}}/{{ns}}.json',
+    },
+    lng: 'en',
+    load: 'languageOnly',
     fallbackLng: 'en',
     debug: true,
 
@@ -16,4 +19,5 @@ i18n
     }
   });
 
-  export default i18n;
+
+  export default i18next;
