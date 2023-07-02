@@ -10,7 +10,7 @@ i18next
       loadPath: () => {
         // check the domain
         const host = window.location.host;
-        return (host === 'production.ltd' ? '/static/app':'') + '/locales/{{lng}}/{{ns}}.json';
+        return (host === 'production.ltd' ? 'https://gracevargas.github.io/3D-Portfolio/':'') + '/locales/{{lng}}/{{ns}}.json';
       },
     },
     lng: 'en',
