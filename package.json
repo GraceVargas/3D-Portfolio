@@ -2,7 +2,7 @@
   "name": "3d_portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://gracevargas.github.io/3D-Portfolio/",
+  "homepage": "/3D-Portfolio/",
   "type": "module",
   "scripts": {
     "dev": "vite",
