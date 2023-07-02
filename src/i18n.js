@@ -16,7 +16,7 @@ i18next
     lng: 'en',
     load: 'languageOnly',
     fallbackLng: 'en',
-    debug: true,
+    debug: false,
 
     interpolation: {
       escapeValue: false // react already safes from xss
