@@ -3,14 +3,13 @@ import { initReactI18next } from "react-i18next";
 import HttpBackend from 'i18next-http-backend';
 
 i18next
-  .use(initReactI18next) // passes i18n down to react-i18next
+  .use(initReactI18next) 
   .use(HttpBackend)
   .init({
     backend: {
       loadPath: () => {
-        // check the domain
         const host = window.location.host;
-        return (host === 'production.ltd' ? 'https://gracevargas.github.io/3D-Portfolio/':'') + '/locales/{{lng}}/{{ns}}.json';
+        return (host === 'production.ltd' ? 'https://gracevargas.github.io/3D-Portfolio':'') + '/locales/{{lng}}/{{ns}}.json';
       },
     },
     lng: 'en',
@@ -19,7 +18,7 @@ i18next
     debug: false,
 
     interpolation: {
-      escapeValue: false // react already safes from xss
+      escapeValue: false 
     }
   });
 
