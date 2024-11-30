@@ -19,7 +19,7 @@ import {
     ahorradas,
     generador_claves,
     fixo,
-    threejs,
+    nextjs,
     film_social,
   } from "../assets";
   
@@ -79,6 +79,10 @@ import {
       icon: reactjs,
     },
     {
+      name: "Next JS",
+      icon: nextjs,
+    },
+    {
       name: "Bootstrap",
       icon: bootstrap,
     },
@@ -87,7 +91,7 @@ import {
       icon: tailwind,
     },
     {
-      name: "ASP",
+      name: "Classic ASP",
       icon: asp,
     },
     {
@@ -95,11 +99,7 @@ import {
       icon: sass,
     },
     {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
-      name: "git",
+      name: "Git",
       icon: git,
     },
   ];

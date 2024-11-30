@@ -18,7 +18,7 @@ import reactjs from "./tech/reactjs.png";
 import bootstrap from "./tech/bootstrap.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import nextjs from "./tech/nextjs.png";
 
 import alot from "./company/alot.png";
 import mater_dei from "./company/mater_dei.png";
@@ -51,7 +51,7 @@ export {
   bootstrap,
   tailwind,
   typescript,
-  threejs,
+  nextjs,
   alot,
   mater_dei,
   film_social,
