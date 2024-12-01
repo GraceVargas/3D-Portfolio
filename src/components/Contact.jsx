@@ -29,7 +29,7 @@ const Contact = () => {
     setLoading();
 
     emailjs.send( 
-      'service_c1ohr9d',
+      'service_fp4izv8',
       'template_hmg6byd',
       {
         from_name: form.name,
@@ -38,7 +38,7 @@ const Contact = () => {
         to_email: 'gracielavargasg@gmail.com',
         message: form.message
       },
-      'YmvMvlkQWr6c0iqx4'
+      'UbwIJ89IzeI9igr9s'
     )
     .then(()=> {
       setLoading(false);
