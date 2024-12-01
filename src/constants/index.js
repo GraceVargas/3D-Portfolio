@@ -116,6 +116,7 @@ import {
         "Exp_1_point_2",
         "Exp_1_point_3",
         "Exp_1_point_4",
+        "Exp_1_point_5",
       ],
     },
     {
